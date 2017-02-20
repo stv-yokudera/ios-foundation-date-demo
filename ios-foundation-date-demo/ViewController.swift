@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         self.renderTimeIntervalSince()
     }
     
+    // 現在日付を取得する
     private func setupInit(){
         date = Date.init()
     }
@@ -40,11 +41,6 @@ class ViewController: UIViewController {
         otherDate.addTimeInterval(60 * 60 * 24)
 
         print(date.compare(otherDate).rawValue)
-    }
-    
-    private func renderDescription(){
-//        var locale = Locale(identifier: "en_US")
-//        print(date.description(locale))
     }
     
     // 引数で渡した日付との差分を秒で取得する
