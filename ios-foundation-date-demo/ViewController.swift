@@ -14,29 +14,29 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupInit()
+        setupDate()
         print(date)
         renderTimeIntervalSince()
     }
 
     // 現在日付を取得する
-    private func setupInit(){
+    private func setupDate() {
         date = Date()
     }
 
     // 現在日付に時間を追加する
-    private func renderAddTimeInterval(){
+    private func renderAddTimeInterval() {
         date.addTimeInterval(60 * 60 * 24)
         print(date)
     }
 
     // 現在日付に時間を追加し、追加した時間を戻す
-    private func renderAddingTimeInterval(){
+    private func renderAddingTimeInterval() {
         print(date.addingTimeInterval(60 * 60 * 24 * 2))
     }
 
     // 引数で渡した日付が過去か未来かを列挙型で取得する
-    private func renderCompare(){
+    private func renderCompare() {
         var otherDate = Date()
         otherDate.addTimeInterval(60 * 60 * 24)
 
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     }
 
     // 引数で渡した日付との差分を秒で取得する
-    private func renderTimeIntervalSince(){
+    private func renderTimeIntervalSince() {
         var otherDate = Date()
         otherDate.addTimeInterval(60 * 60 * 24)
         print(date.timeIntervalSince(otherDate))
